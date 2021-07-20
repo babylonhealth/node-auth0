@@ -1,5 +1,4 @@
 var RestClient = require('rest-facade').Client;
-var Promise = require('bluebird');
 var ArgumentError = require('rest-facade').ArgumentError;
 
 var utils = require('./utils');
@@ -66,15 +65,24 @@ Auth0RestClient.prototype.create = function(/* [params], [callback] */) {
   return this.wrappedProvider('create', arguments);
 };
 
-Auth0RestClient.prototype.patch = function(/* [params], [callback] */) {
+Auth0RestClient.prototype.patch = function(params, callback) {
+  if (typeof params === 'object' && params.id) {
+    params.id = utils.maybeDecode(`${params.id}`);
+  }
   return this.wrappedProvider('patch', arguments);
 };
 
-Auth0RestClient.prototype.update = function(/* [params], [callback] */) {
+Auth0RestClient.prototype.update = function(params, callback) {
+  if (typeof params === 'object' && params.id) {
+    params.id = utils.maybeDecode(`${params.id}`);
+  }
   return this.wrappedProvider('update', arguments);
 };
 
-Auth0RestClient.prototype.delete = function(/* [params], [callback] */) {
+Auth0RestClient.prototype.delete = function(params, callback) {
+  if (typeof params === 'object' && params.id) {
+    params.id = utils.maybeDecode(`${params.id}`);
+  }
   return this.wrappedProvider('delete', arguments);
 };
 

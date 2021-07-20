@@ -1,6 +1,5 @@
 var jwt = require('jsonwebtoken');
 var jwksClient = require('jwks-rsa');
-var Promise = require('bluebird');
 
 var ArgumentError = require('rest-facade').ArgumentError;
 var validateIdToken = require('./idToken').validate;
@@ -86,6 +85,10 @@ OAUthWithIDTokenValidation.prototype.create = function(params, data, cb) {
           audience: this.clientId,
           issuer: 'https://' + this.domain + '/'
         };
+
+        if (data.organization) {
+          options.organization = data.organization;
+        }
 
         if (data.nonce) {
           options.nonce = data.nonce;

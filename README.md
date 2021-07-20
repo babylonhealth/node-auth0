@@ -5,6 +5,7 @@
 [![Coverage][codecov-image]][codecov-url]
 [![License][license-image]][license-url]
 [![Downloads][downloads-image]][downloads-url]
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fauth0%2Fnode-auth0.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fauth0%2Fnode-auth0?ref=badge_shield)
 
 Node.js client library for the [Auth0](https://auth0.com) platform.
 
@@ -18,7 +19,7 @@ npm install auth0
 
 You can find this library documentation in this [page](https://auth0.github.io/node-auth0/).
 
-For more information about [auth0](https://auth0.com) check our [documentation page](https://docs.auth0.com/).
+For more information about [auth0](https://auth0.com) check our [documentation page](https://auth0.com/docs).
 
 ## Authentication API Client
 
@@ -117,6 +118,8 @@ management
     // Handle error.
   });
 ```
+## Typescript
+The types for this library are currently maintained by the community at [Definitely Typed](https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/auth0).  The team is planning taking ownership of this library as discussed in https://github.com/auth0/node-auth0/issues/572. After the team has taken ownership we will remove this net from the Readme.
 
 ## What is Auth0?
 
@@ -158,3 +161,6 @@ This project is licensed under the MIT license. See the [LICENSE](LICENSE) file 
 [license-url]: #license
 [downloads-image]: https://img.shields.io/npm/dm/auth0.svg?style=flat-square
 [downloads-url]: https://npmjs.org/package/auth0
+
+
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fauth0%2Fnode-auth0.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fauth0%2Fnode-auth0?ref=badge_large)
